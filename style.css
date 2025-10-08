@@ -1,77 +1,271 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* Modern Professional Portfolio CSS */
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #f97316;
+  --dark-color: #1e293b;
+  --light-color: #f8fafc;
+  --gray-color: #94a3b8;
+  --success-color: #10b981;
+  --font-primary: 'Poppins', sans-serif;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+  background-attachment: fixed;
+  color: var(--dark-color);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--light-color);
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
 }
 
 header h1 {
-    margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: var(--light-color);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav ul {
-    padding: 0;
-    list-style: none;
-    background-color: #444;
-    text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
+  margin: 0;
 }
 
 nav ul li a {
-    display: inline-block;
-    padding: 1rem;
-    color: #fff;
-    text-decoration: none;
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border-bottom: 3px solid transparent;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-bottom: 3px solid var(--accent-color);
 }
 
+nav ul li a.active {
+  border-bottom: 3px solid var(--accent-color);
+}
+
+/* Main Content Styles */
 main {
-    padding: 1rem;
+  padding: 2rem 0;
+  margin-bottom: 4rem;
 }
 
 section {
-    margin-bottom: 1rem;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 5px;
+  background: var(--light-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
+section:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Project Styles */
+.project {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.project p {
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+.project a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: var(--transition);
+}
+
+.project a:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Resume Section */
+#resume a {
+  display: inline-block;
+  background-color: var(--success-color);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+#resume a:hover {
+  background-color: #059669;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Contact Section */
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+#contact a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Footer Styles */
 footer {
-    text-align: center;
+  background: linear-gradient(135deg, var(--dark-color) 0%, #0f172a 100%);
+  color: var(--light-color);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  nav ul li a {
+    padding: 0.8rem 1rem;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    border-left: 3px solid var(--accent-color);
+    border-bottom: none;
+  }
+  
+  main {
     padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
 }
 
-#resume input[type="file"] {
-    margin-bottom: 10px;
-}
-
-#resume button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#resume button:hover {
-    background-color: #555;
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  header {
+    padding: 1.5rem 0;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  section {
+    padding: 1rem;
+  }
+  
+  .project {
+    padding: 1rem;
+  }
 }

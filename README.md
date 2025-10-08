@@ -39,11 +39,28 @@ portfolio-website/
 
 ## Deployment
 
-This website can be deployed to any static hosting service such as:
-- GitHub Pages
-- Netlify
-- Vercel
-- Firebase Hosting
+This website can be deployed for free using GitHub Pages, making it accessible to anyone anywhere in the world.
+
+### GitHub Pages Deployment (Free)
+
+1. Ensure your project is on GitHub (it already is: https://github.com/lordemmag-devops/portfolio-website)
+2. Go to your repository settings on GitHub
+3. Scroll down to the "Pages" section in the sidebar
+4. Under "Source", select "Deploy from a branch"
+5. Choose "main" branch and "/ (root)" folder
+6. Click "Save"
+7. Your website will be available at: https://lordemmag-devops.github.io/portfolio-website/
+
+### Alternative Free Deployment Options
+
+- **Netlify**: Drag and drop your project folder to https://app.netlify.com/drop
+- **Vercel**: Import your Git repository at https://vercel.com/import
+- **Firebase Hosting**: 
+  1. Install Firebase CLI: `npm install -g firebase-tools`
+  2. Run `firebase login` and `firebase init hosting`
+  3. Run `firebase deploy`
+
+The website will be accessible worldwide once deployed.
 
 ## Git Repository
 
