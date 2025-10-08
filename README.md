@@ -47,7 +47,7 @@ This website can be deployed for free using GitHub Pages, making it accessible t
 2. Go to your repository settings on GitHub
 3. Scroll down to the "Pages" section in the sidebar
 4. Under "Source", select "Deploy from a branch"
-5. Choose "main" branch and "/ (root)" folder
+5. Choose "master" branch and "/ (root)" folder
 6. Click "Save"
 7. Your website will be available at: https://lordemmag-devops.github.io/portfolio-website/
 
